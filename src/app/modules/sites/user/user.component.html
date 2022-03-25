@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="title1"><h1 class="title">Usuarios</h1></div>
+  <div class="save-users my-3">
+    <button mat-raised-button color="primary" (click)="addUser()">
+      Crear Usuario
+    </button>
+  </div>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Names Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Nombre</th>
+      <td mat-cell *matCellDef="let contac">{{ contac.name }}</td>
+    </ng-container>
+
+    <!-- Mail Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let contac">{{ contac.email }}</td>
+    </ng-container>
+
+     <!-- password Column -->
+     <ng-container matColumnDef="password">
+      <th mat-header-cell *matHeaderCellDef>Contraseña</th>
+      <td mat-cell *matCellDef="let contac">
+        <input class="inp" type="password" value="{{ contac.password }}" />
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

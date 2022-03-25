@@ -1,0 +1,31 @@
+.example-sidenav {
+  padding: 0px;
+  // height: 600px;
+}
+.example-card-detail{
+  width: 350px;
+  height: 600px;
+}
+.header-card-detail{
+  height: 40px;
+  justify-content: center;
+  overflow:hidden;
+}
+.img-card-detail{
+  width: 300px;
+  height: 240px;
+  object-fit: contain;
+  margin: 8px 0px 8px 0px;
+}
+.descrip-card-detail{
+  height: 170px;
+  overflow:hidden;
+  margin-bottom: 0px;
+}
+.button-card-detail{
+padding-left: 122px;
+}
+.price-card{
+  font-weight: bold;
+  font-size: 20px;
+}

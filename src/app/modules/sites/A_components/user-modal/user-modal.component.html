@@ -1,0 +1,63 @@
+<h1 mat-dialog-title>¡Bienvenido!</h1>
+<h2 mat-dialog-title>Registra un Nuevo Usuario</h2>
+<p class="line">
+  ------------------------------------------------------------------------------
+</p>
+<p>Ingresa los siguientes datos:</p>
+<div mat-dialog-content>
+  <form *ngIf="form" [formGroup]="form">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput type="text" formControlName="name" />
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+    <!-- <label for="">Ingrese nombre de usuario</label> -->
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="text" formControlName="email" />
+      <mat-icon matSuffix>email</mat-icon>
+    </mat-form-field>
+
+    <!-- <label for="">Ingrese contraseña</label> -->
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        [type]="hide ? 'password' : 'text'"
+        formControlName="password"
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+  </form>
+  <div *ngIf="this.verifica === false; then card"></div>
+  <ng-template #card>
+    <mat-card class="card">La infomación es inválida</mat-card>
+  </ng-template>
+</div>
+<div mat-dialog-actions class="button-modal">
+  <button
+    mat-flat-button
+    color="primary"
+    (click)="onSave()"
+    class="button-save"
+  >
+    Guardar
+  </button>
+  <button
+    mat-flat-button
+    color="warn"
+    (click)="onClose()"
+    class="button-cancel"
+  >
+    Cancelar
+  </button>
+</div>

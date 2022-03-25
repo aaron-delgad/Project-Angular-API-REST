@@ -1,0 +1,25 @@
+<mat-card class="example-card divide">
+  <mat-card-header class="header-card">
+    <mat-card-title>{{ product.title }}</mat-card-title>
+  </mat-card-header>
+  <img class="img-card" mat-card-image [src]="product.images" alt="" />
+  <p class="price-card">
+    {{ product.price | currency: "PEN ":"symbol" }}
+  </p>
+  <mat-card-content class="descrip-card">
+    <p>
+      {{ product.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="button-card">
+    <button
+      mat-stroked-button
+      color="primary"
+      (click)="ngOnProductDetail()"
+
+    >
+      Ver Detalle
+    </button>
+    <button mat-stroked-button color="primary">Carrito</button>
+  </mat-card-actions>
+</mat-card>

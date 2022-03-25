@@ -1,0 +1,26 @@
+.header-card{
+  height: 40px;
+  justify-content: center;
+  overflow:hidden;
+  }
+  .img-card{
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin: 8px auto 12px auto;
+   }
+.price-card{
+  font-weight: bold;
+  font-size: 20px;
+}
+.descrip-card{
+  height: 60px;
+  overflow:hidden;
+  margin-bottom: 0px;
+}
+.divide{
+  margin-bottom: 12px;
+}
+.button-card{
+  padding-left: 24px;
+}
